@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <title>Faucetpay Reward</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="https://sad.adsgram.ai/js/sad.min.js"></script>
-<script src='//libtl.com/sdk.js' data-zone='10993310' data-sdk='show_10993310'></script>
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -572,8 +570,8 @@ const userId = tgUser?.id ? String(tgUser.id) : 'local_user';
 const STORAGE_KEY = 'rcS_' + userId;
 
 // ── ADSGRAM SETUP ──
-const ADSGRAM_BLOCK_ID     = '29911';
-const ADSGRAM_INT_BLOCK_ID = 'int-29927';
+const ADSGRAM_BLOCK_ID     = '';
+const ADSGRAM_INT_BLOCK_ID = '';
 let AdController    = null;
 let AdIntController = null;
 
@@ -632,7 +630,7 @@ startInterstitialLoop();
 // Shows 2 ads within 6 minutes, 120s interval, 5s delay before first
 function initMonetag(){
   try {
-    show_10993310({
+    show_10910({
       type: 'inApp',
       inAppSettings: {
         frequency: 2,
@@ -646,7 +644,7 @@ function initMonetag(){
     // Retry once Monetag script loads (async)
     window.addEventListener('load', ()=>{
       try {
-        show_10993310({
+        show_10310({
           type: 'inApp',
           inAppSettings: {
             frequency: 2,
